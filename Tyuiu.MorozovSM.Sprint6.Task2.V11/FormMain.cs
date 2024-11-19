@@ -26,7 +26,7 @@ namespace Tyuiu.MorozovSM.Sprint6.Task2.V11
             {
                 int startValue = Convert.ToInt32(textBoxInputStartStepEnd_MSM.Text);
                 int stopValue = Convert.ToInt32(textBoxInputStopStepEnd_MSM.Text);
-                int len = stopValue - startValue+1;
+                int len = stopValue - startValue + 1;
                 double[] array = ds.GetMassFunction(startValue, stopValue);
                 double[] ListX = new double[len];
                 double[] ListY = new double[len];
@@ -34,7 +34,7 @@ namespace Tyuiu.MorozovSM.Sprint6.Task2.V11
                 this.dataGridViewOutput_MSM.Rows.Clear();
 
 
-                for (int i = 0; i < len; i++) 
+                for (int i = 0; i < len; i++)
                 {
                     ListX[i] = startValue;
                     ListY[i] = array[i];
@@ -51,7 +51,7 @@ namespace Tyuiu.MorozovSM.Sprint6.Task2.V11
 
                 formsPlotOutput_MSM.Refresh();
             }
-            catch 
+            catch
             {
                 MessageBox.Show("¬ведены неверные данные", "ќшибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
